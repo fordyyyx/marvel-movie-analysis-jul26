@@ -23,7 +23,6 @@ CREATE TABLE marvel_master (
     rt_score                    NUMERIC,
     metacritic_score            NUMERIC,
     box_office_usd              BIGINT,
-    production                  TEXT,
     mcu_phase                   TEXT,
     universe                    TEXT,
     decade                      NUMERIC,
