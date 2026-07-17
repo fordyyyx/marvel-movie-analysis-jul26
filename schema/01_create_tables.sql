@@ -9,7 +9,7 @@ CREATE TABLE marvel_master (
     imdb_id                     VARCHAR,
     type                        TEXT,
     rated                       TEXT,
-    runtime_min                 TEXT,
+    runtime_min                 INTEGER,
     genre                       TEXT,
     director                    TEXT,
     writer                      TEXT,
@@ -18,24 +18,23 @@ CREATE TABLE marvel_master (
     language                    TEXT,
     country                     TEXT,
     awards                      TEXT,
-    imdb_rating                 TEXT,
-    imdb_votes                  TEXT,
-    rt_score                    TEXT,
-    metacritic_score            TEXT,
-    box_office_usd              TEXT,
+    imdb_rating                 NUMERIC,
+    imdb_votes                  INTEGER,
+    rt_score                    NUMERIC,
+    metacritic_score            NUMERIC,
+    box_office_usd              BIGINT,
     production                  TEXT,
-    website                     TEXT,
     mcu_phase                   TEXT,
     universe                    TEXT,
-    decade                      TEXT,
+    decade                      NUMERIC,
     age_years                   NUMERIC,
     is_animated                 BOOLEAN,
     is_tv_series                BOOLEAN,
     is_mcu_canon                BOOLEAN,
     tmdb_id                     NUMERIC,
     tmdb_genres                 TEXT,
-    budget_usd                  TEXT,
-    revenue_usd                 TEXT,
+    budget_usd                  BIGINT,
+    revenue_usd                 BIGINT,
     tmdb_rating                 NUMERIC,
     tmdb_votes                  NUMERIC,
     popularity                  NUMERIC,
@@ -45,11 +44,10 @@ CREATE TABLE marvel_master (
     composer                    TEXT,
     tmdb_keywords               TEXT,
     collection_name             TEXT,
-    poster_url                  TEXT,
     production_countries        TEXT,
     spoken_languages            TEXT,
-    episode_count               TEXT,
-    season_count                TEXT,
+    episode_count               INTEGER,
+    season_count                INTEGER,
     network                     TEXT,
     status                      TEXT,
     tagline                     TEXT
@@ -63,14 +61,13 @@ CREATE TABLE marvel_cast (
     character                   TEXT,
     cast_order                  INTEGER,
     actor_tmdb_id               NUMERIC,
-    popularity                  NUMERIC,
-    profile_path                TEXT
+    popularity                  NUMERIC
 );
 
 CREATE TABLE marvel_ratings (
     title                       TEXT,
     year                        NUMERIC,
     source                      TEXT,
-    score                       TEXT
+    score                       NUMERIC
 );
 
