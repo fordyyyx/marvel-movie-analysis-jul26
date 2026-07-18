@@ -1,5 +1,6 @@
 DROP TABLE IF EXISTS marvel_no_reviews;
 DROP TABLE IF EXISTS marvel_with_ids;
+DROP TABLE IF EXISTS marvel_with_actors;
 
 CREATE TABLE marvel_no_reviews AS 
 SELECT 	title,
@@ -43,13 +44,14 @@ SELECT  title,
         season_count
 FROM marvel_master;
 
+
 WITH marvel_cast_actors AS (
 SELECT  actor_name,
 		CHARACTER,
 		tmdb_id
 FROM marvel_cast)
 
-
+CREATE TABLE marvel_with_actors AS
 SELECT  mwi.title,
 		mwi.YEAR,
 		mwi.TYPE,
