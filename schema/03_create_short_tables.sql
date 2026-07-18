@@ -44,14 +44,12 @@ SELECT  title,
         season_count
 FROM marvel_master;
 
-
+CREATE TABLE marvel_with_actors AS
 WITH marvel_cast_actors AS (
 SELECT  actor_name,
 		CHARACTER,
 		tmdb_id
 FROM marvel_cast)
-
-CREATE TABLE marvel_with_actors AS
 SELECT  mwi.title,
 		mwi.YEAR,
 		mwi.TYPE,
